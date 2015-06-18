@@ -33,13 +33,10 @@ public class EventsIndexerApplication extends Application<EventsIndexerConfigura
         RabbitmqManager rabbitmqManager = new RabbitmqManager(configuration);
         environment.lifecycle().manage(rabbitmqManager);
 
-        //final Client client = new JerseyClientBuilder(environment).using(configuration.getJerseyClientConfiguration())
-        //        .build(getName());
+        InfluxDBManager influxDBManager = new InfluxDBManager(configuration, environment);
+        environment.lifecycle().manage(influxDBManager);
 
-        /*final Client client = new JerseyClientBuilder(environment).using(new JerseyClientConfiguration())
-                .build(getName());
-
-        WebTarget webTarget = client.target("http://192.168.59.103:8086/db/db1/series?u=root&p=root");*/
+        new ConsumersRegistrar(rabbitmqManager, influxDBManager).register();
     }
 }
 

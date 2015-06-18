@@ -21,6 +21,14 @@ public class RabbitmqManager implements Managed {
         this.rabbitmqConf = configuration.getRabbitmqConfiguration();
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
+    public RabbitmqConfiguration getRabbitmqConf() {
+        return rabbitmqConf;
+    }
+
     @Override
     public void start() throws Exception {
 
@@ -36,32 +44,17 @@ public class RabbitmqManager implements Managed {
         Channel defineChannel = connection.createChannel();
         defineChannel.queueDeclare(rabbitmqConf.getQueueName(), true, false, false, null);
 
-        registerConsumers();
 
         //Temp code to simulate sending of events
         Channel producerChannel = connection.createChannel();
         for (int i=0; i< 10; i++) {
             String message = "Hello World! - " + i;
-            producerChannel.basicPublish("", rabbitmqConf.getRoutingKey(), null, message.getBytes());
+            AMQP.BasicProperties props = new AMQP.BasicProperties();
+            props.getHeaders().put("dbname", "db2");
+            producerChannel.basicPublish("", rabbitmqConf.getRoutingKey(), props, message.getBytes());
             System.out.println(" [x] Sent '" + message + "'");
         }
 
-    }
-
-    /*
-            Create consumers according to the number of processors available for the JVM
-            DefaultConsumer in RabbitMQ is running on a thread comming for a ThreadPool
-            RabbitMQ is managing the ThreadPool
-            Also we allocate channel per consumer (This is the best practice according to RabbitMQ docs to avoid multi threading problems)
-
-        */
-    private void registerConsumers() throws Exception
-    {
-        for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
-
-            Channel consumerChannel = connection.createChannel();
-            consumerChannel.basicConsume(rabbitmqConf.getQueueName(), false, new EventIndexerConsumer(consumerChannel));
-        }
     }
 
     @Override
