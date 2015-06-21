@@ -1,6 +1,9 @@
 package adm.gaia.events.indexer;
 
-import com.rabbitmq.client.*;
+import adm.gaia.events.indexer.conf.EventsIndexerConfiguration;
+import adm.gaia.events.indexer.consume.ConsumersRegistrar;
+import adm.gaia.events.indexer.managers.InfluxDBManager;
+import adm.gaia.events.indexer.managers.RabbitmqManager;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -31,10 +34,16 @@ public class EventsIndexerApplication extends Application<EventsIndexerConfigura
     {
 
         RabbitmqManager rabbitmqManager = new RabbitmqManager(configuration);
-        environment.lifecycle().manage(rabbitmqManager);
+
+        //For some reason Dropwizard do not call "stop" on shutting down.
+        //Also it is not clear when "start" is being called.
+        //For now we do it by ourselves instead of let Dropwizard do it
+        rabbitmqManager.start();
+        //environment.lifecycle().manage(rabbitmqManager);
 
         InfluxDBManager influxDBManager = new InfluxDBManager(configuration, environment);
-        environment.lifecycle().manage(influxDBManager);
+        influxDBManager.start();
+        //environment.lifecycle().manage(influxDBManager);
 
         new ConsumersRegistrar(rabbitmqManager, influxDBManager).register();
     }

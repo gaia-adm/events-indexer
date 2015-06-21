@@ -1,4 +1,4 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.conf;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rabbitmq.client.ConnectionFactory;
@@ -20,7 +20,7 @@ public class InfluxDBConfiguration {
     @Min(1)
     @Max(65535)
     @JsonProperty
-    private int port = 8086;
+    private int port = 8086; // To check things with Fiddler use "8888";
 
     @JsonProperty
     private String username = "root";

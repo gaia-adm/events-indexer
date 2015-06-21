@@ -1,13 +1,13 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.managers;
 
+import adm.gaia.events.indexer.conf.EventsIndexerConfiguration;
+import adm.gaia.events.indexer.conf.InfluxDBConfiguration;
 import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.client.JerseyClientConfiguration;
 import io.dropwizard.lifecycle.Managed;
 import io.dropwizard.setup.Environment;
-import io.dropwizard.util.Duration;
 
 import javax.ws.rs.client.Client;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by tsadok on 18/06/2015.
@@ -26,7 +26,8 @@ public class InfluxDBManager implements Managed {
 
         InfluxDBConfiguration conf = eventsIndexerConfiguration.getInfluxDBConfiguration();
         StringBuilder baseBuilder = new StringBuilder();
-        influxDbBaseUrl = baseBuilder.append(conf.getProtocol()).append(conf.getHost()).append(":").append(conf.getPort()).append("/db/").toString();
+        influxDbBaseUrl = baseBuilder.append(conf.getProtocol()).append("://").append(conf.getHost()).append(":").
+                append(conf.getPort()).append("/db/").toString();
 
         StringBuilder paramsBuilder = new StringBuilder();
         influxDbQueryParams = paramsBuilder.append("?u=").append(conf.getUsername()).append("&p=").append(conf.getPassword()).toString();
@@ -47,6 +48,7 @@ public class InfluxDBManager implements Managed {
 
     @Override
     public void start() throws Exception {
+
 
         JerseyClientConfiguration jerseyClientConfiguration = new JerseyClientConfiguration();
         jerseyClient = new JerseyClientBuilder(environment).using(jerseyClientConfiguration).

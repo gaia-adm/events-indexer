@@ -1,10 +1,7 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.conf;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by tsadok on 14/06/2015.

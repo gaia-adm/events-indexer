@@ -1,8 +1,8 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.consume;
 
+import adm.gaia.events.indexer.managers.InfluxDBManager;
+import adm.gaia.events.indexer.managers.RabbitmqManager;
 import com.rabbitmq.client.Channel;
-
-import javax.ws.rs.client.WebTarget;
 
 /**
  * Created by tsadok on 18/06/2015.

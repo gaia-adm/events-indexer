@@ -1,11 +1,15 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.consume;
 
+import adm.gaia.events.indexer.managers.InfluxDBManager;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 /**
@@ -28,15 +32,24 @@ public class EventIndexerConsumer extends DefaultConsumer {
 
         try {
             String dbName = props.getHeaders().get("dbname").toString();
-            if (dbName == null)
-            {
-                System.err.println("Rabbitmq dbname header property was empty, rejecting the message");
+            if (dbName == null) {
+                System.err.println("Rabbitmq dbname header property was empty, sending Nack to RabbitMQ");
                 getChannel().basicNack(envelope.getDeliveryTag(), false, false);
             }
 
             WebTarget webTarget = influxDBManager.getJerseyClient().target(influxDBManager.getInfluxDbBaseUrl() + dbName + "/series" + influxDBManager.getInfluxDbQueryParams());
-            getChannel().basicAck(envelope.getDeliveryTag(), false);
-        } catch (IOException e) {
+            Response response = webTarget.request(MediaType.APPLICATION_JSON_TYPE).
+                                             post(Entity.entity(body, MediaType.APPLICATION_JSON_TYPE));
+
+            if (response.getStatus() == 200) {
+                getChannel().basicAck(envelope.getDeliveryTag(), false);
+            } else
+            {
+                System.err.println("Failed to post to InfluxDB: " + response.toString() + ", Sending Nack to RabbitMQ");
+                getChannel().basicNack(envelope.getDeliveryTag(), false, false);
+            }
+
+       } catch (IOException e) {
             e.printStackTrace();
         }
     };

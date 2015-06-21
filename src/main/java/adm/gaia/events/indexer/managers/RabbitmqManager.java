@@ -1,11 +1,12 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.managers;
 
+import adm.gaia.events.indexer.conf.EventsIndexerConfiguration;
+import adm.gaia.events.indexer.conf.RabbitmqConfiguration;
 import com.rabbitmq.client.*;
 import io.dropwizard.lifecycle.Managed;
 
-import javax.inject.Inject;
-import javax.validation.constraints.NotNull;
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Taking care for the setup and tire down of RabbitMQ connections
@@ -37,8 +38,16 @@ public class RabbitmqManager implements Managed {
         factory.setPort(rabbitmqConf.getPort());
         factory.setUsername(rabbitmqConf.getUsername());
         factory.setPassword(rabbitmqConf.getPassword());
+
         factory.setAutomaticRecoveryEnabled(true); // connection that will recover automatically
-        factory.setNetworkRecoveryInterval(10000); // attempt recovery every 10 seconds
+        factory.setNetworkRecoveryInterval(10000); // attempt recovery to the max of 10 seconds
+
+        factory.setRequestedHeartbeat(30); // Setting heartbeat to 30 sec instead the default of 10 min
+                                           // that way the client will know that server is unreachable
+                                           // and will try to reconnect
+                                           // The same is true for the server (the broker) - after 30 sec
+                                           // he will close the consumers.
+
         connection = factory.newConnection();
 
         Channel defineChannel = connection.createChannel();
@@ -48,10 +57,12 @@ public class RabbitmqManager implements Managed {
         //Temp code to simulate sending of events
         Channel producerChannel = connection.createChannel();
         for (int i=0; i< 10; i++) {
-            String message = "Hello World! - " + i;
-            AMQP.BasicProperties props = new AMQP.BasicProperties();
-            props.getHeaders().put("dbname", "db2");
-            producerChannel.basicPublish("", rabbitmqConf.getRoutingKey(), props, message.getBytes());
+            String message = "[{\"points\":[[" + System.currentTimeMillis() + "," + i + "]],\"name\":\"agm_storypoints\",\"columns\":[\"time\", \"new_val\"]}]";
+            AMQP.BasicProperties.Builder propsBuilder = new AMQP.BasicProperties.Builder();
+            Map map = new HashMap<String,Object>();
+            map.put("dbname", "db1");
+            propsBuilder.headers(map);
+            producerChannel.basicPublish("", rabbitmqConf.getRoutingKey(), propsBuilder.build(), message.getBytes());
             System.out.println(" [x] Sent '" + message + "'");
         }
 

@@ -1,4 +1,4 @@
-package adm.gaia.events.indexer;
+package adm.gaia.events.indexer.conf;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rabbitmq.client.ConnectionFactory;
