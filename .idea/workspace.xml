@@ -1,93 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9bf8662-8f66-455a-962b-6a4d1188a95f" name="Default" comment="forth">
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__ch_qos_logback_logback_core_1_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_classmate_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_datatype_jackson_datatype_guava_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk7_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_datatype_jackson_datatype_joda_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_google_code_findbugs_jsr305_3_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__com_google_guava_guava_18_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__commons_codec_commons_codec_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_client_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_configuration_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_core_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_jackson_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_jersey_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_jetty_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_lifecycle_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_logging_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_metrics_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_servlets_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_util_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_dropwizard_validation_0_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_annotation_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_core_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_healthchecks_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_httpclient_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_jersey2_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_jetty9_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_json_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_jvm_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_logback_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__io_dropwizard_metrics_metrics_servlets_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__joda_time_joda_time_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__net_sourceforge_argparse4j_argparse4j_0_4_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_apache_httpcomponents_httpclient_4_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_continuation_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_http_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_io_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_security_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_server_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_servlet_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_servlets_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_util_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_webapp_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_jetty_xml_9_2_9_v20150224.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_eclipse_jetty_toolchain_setuid_jetty_setuid_java_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_4_0_b10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_external_javax_inject_2_4_0_b10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_hk2_api_2_4_0_b10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_hk2_locator_2_4_0_b10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_hk2_utils_2_4_0_b10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_javax_el_3_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_connectors_jersey_apache_connector_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_client_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_common_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_server_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_ext_jersey_metainf_services_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_glassfish_jersey_media_jersey_media_jaxb_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gaia-adm\events-indexer\.idea\libraries\Maven__org_yaml_snakeyaml_1_12.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/InfluxDBConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/InfluxDBConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/RabbitmqConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/RabbitmqConfiguration.java" />
+    <list default="true" id="d9bf8662-8f66-455a-962b-6a4d1188a95f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/circle.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rabbitmq-consumer.iws" />
@@ -111,21 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventsIndexerApplication.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/EventsIndexerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1300">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RabbitmqManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/managers/RabbitmqManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1875">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1875">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18450184" vertical-offset="0" max-vertical-offset="542">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="250">
               <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding />
             </state>
@@ -164,8 +69,18 @@
       <file leaf-file-name="circle.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/circle.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="725">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
+              <caret line="15" column="99" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29675">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -244,10 +159,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/consume/EventIndexerConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/managers/RabbitmqManager.java" />
-        <option value="$PROJECT_DIR$/circle.yml" />
         <option value="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/RabbitmqConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/InfluxDBConfiguration.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/circle.yml" />
       </list>
     </option>
   </component>
@@ -445,48 +360,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="managers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rabbitmq-consumer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events-indexer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gaia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="indexer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consume" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,7 +633,7 @@
       <workItem from="1434285823242" duration="23485000" />
       <workItem from="1434546280952" duration="6030000" />
       <workItem from="1434631438631" duration="13278000" />
-      <workItem from="1434915500700" duration="15840000" />
+      <workItem from="1434915500700" duration="17321000" />
     </task>
     <task id="LOCAL-00001" summary="Start to work on InfluxDB integration">
       <created>1434638559887</created>
@@ -786,11 +659,15 @@
       <created>1435488915674</created>
       <updated>1435488915674</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dockerfiles for build and run + circle ci configuration">
+      <created>1435511663366</created>
+      <updated>1435511663366</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58633000" />
+    <option name="totallyTimeSpent" value="60114000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -889,7 +766,8 @@
     <MESSAGE value="Docker for building the project - second try" />
     <MESSAGE value="third" />
     <MESSAGE value="forth" />
-    <option name="LAST_COMMIT_MESSAGE" value="forth" />
+    <MESSAGE value="Dockerfiles for build and run + circle ci configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfiles for build and run + circle ci configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -905,14 +783,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/consume/EventIndexerConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="950">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/EventsIndexerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="725">
@@ -1242,14 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/managers/RabbitmqManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1875">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/conf/EventsIndexerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
@@ -1282,18 +1144,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circle.yml">
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="725">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="250">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/src/main/java/adm/gaia/events/indexer/managers/RabbitmqManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18450184" vertical-offset="0" max-vertical-offset="542">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1875">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circle.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
+          <caret line="15" column="99" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29675">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
