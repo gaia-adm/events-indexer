@@ -27,7 +27,7 @@ public class RabbitmqConfiguration {
     private String routingKey = queueName;
 
     @JsonProperty
-    private String host = "192.168.59.103";
+    private String host = "rabbitmq";//"192.168.59.103";
 
     @Min(1)
     @Max(65535)

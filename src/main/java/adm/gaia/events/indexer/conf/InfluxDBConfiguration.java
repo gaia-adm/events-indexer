@@ -15,7 +15,7 @@ public class InfluxDBConfiguration {
     private String protocol = "http";
 
     @JsonProperty
-    private String host = "192.168.59.103";
+    private String host = "influxdb";//"192.168.59.103";
 
     @Min(1)
     @Max(65535)
