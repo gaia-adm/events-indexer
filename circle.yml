@@ -1,0 +1,24 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - cp Dockerfile Dockerfile.run
+    - cp Dockerfile.build Dockerfile
+    - docker build -t build-img .
+    - docker create --name build-cont build-img
+    - docker cp build-cont:/usr/local/gaia/target/events-indexer-1.0-SNAPSHOT.jar ./target/events-indexer.jar
+    - cp Dockerfile.run Dockerfile
+    - docker build -t gaiaadm/event-indexer .
+test:
+  override:
+    - docker run -d gaiaadm/event-indexer:$BUILD_TAG; sleep 10
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push gaiaadm/event-indexer
+general:
+  artifacts:
+    - target/event-indexer.jar

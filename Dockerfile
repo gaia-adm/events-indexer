@@ -1,10 +1,8 @@
-FROM maven:3.3.3-jdk-8
+FROM java:8-jre
 
 ENV GAIA_HOME=/usr/local/gaia
-
-RUN mkdir -p $GAIA_HOME
 WORKDIR $GAIA_HOME
 
-ADD . $GAIA_HOME
+COPY ./target/event-indexer.jar $GAIA_HOME
 
-RUN ["mvn","clean","install"]
+CMD java -jar $GAIA_HOME/targer/event-indexer.jar server
