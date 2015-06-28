@@ -7,7 +7,7 @@ dependencies:
     - cp Dockerfile.build Dockerfile
     - docker build -t build-img .
     - docker create --name build-cont build-img
-    - docker cp build-cont:/usr/local/gaia/target/events-indexer-1.0-SNAPSHOT.jar ./target/events-indexer.jar
+    - docker cp build-cont:/usr/local/gaia/target/events-indexer-1.0-SNAPSHOT.jar ./target
     - cp Dockerfile.run Dockerfile
     - docker build -t gaiaadm/event-indexer .
 test:

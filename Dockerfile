@@ -5,4 +5,4 @@ WORKDIR $GAIA_HOME
 
 COPY ./target/event-indexer.jar $GAIA_HOME
 
-CMD java -jar $GAIA_HOME/targer/event-indexer.jar server
+CMD java -jar $GAIA_HOME/target/events-indexer-1.0-SNAPSHOT.jar server
