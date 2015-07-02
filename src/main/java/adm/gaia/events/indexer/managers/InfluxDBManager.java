@@ -26,12 +26,12 @@ public class InfluxDBManager implements Managed {
 
         InfluxDBConfiguration conf = eventsIndexerConfiguration.getInfluxDBConfiguration();
         StringBuilder baseBuilder = new StringBuilder();
+
         influxDbBaseUrl = baseBuilder.append(conf.getProtocol()).append("://").append(conf.getHost()).append(":").
-                append(conf.getPort()).append("/db/").toString();
+                append(conf.getPort()).append("/write?db=").toString();
 
         StringBuilder paramsBuilder = new StringBuilder();
-        influxDbQueryParams = paramsBuilder.append("?u=").append(conf.getUsername()).append("&p=").append(conf.getPassword()).toString();
-
+        influxDbQueryParams = paramsBuilder.append("&u=").append(conf.getUsername()).append("&p=").append(conf.getPassword()).toString();
     }
 
     public Client getJerseyClient() {

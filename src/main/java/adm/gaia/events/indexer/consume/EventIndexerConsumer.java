@@ -37,9 +37,9 @@ public class EventIndexerConsumer extends DefaultConsumer {
                 getChannel().basicNack(envelope.getDeliveryTag(), false, false);
             }
 
-            WebTarget webTarget = influxDBManager.getJerseyClient().target(influxDBManager.getInfluxDbBaseUrl() + dbName + "/series" + influxDBManager.getInfluxDbQueryParams());
+            WebTarget webTarget = influxDBManager.getJerseyClient().target(influxDBManager.getInfluxDbBaseUrl() + dbName + influxDBManager.getInfluxDbQueryParams());
             Response response = webTarget.request(MediaType.APPLICATION_JSON_TYPE).
-                                             post(Entity.entity(body, MediaType.APPLICATION_JSON_TYPE));
+                                             post(Entity.entity(body, MediaType.TEXT_PLAIN_TYPE));
 
             if (response.getStatus() == 200) {
                 getChannel().basicAck(envelope.getDeliveryTag(), false);
