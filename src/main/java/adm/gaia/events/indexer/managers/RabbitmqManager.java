@@ -52,20 +52,6 @@ public class RabbitmqManager implements Managed {
 
         Channel defineChannel = connection.createChannel();
         defineChannel.queueDeclare(rabbitmqConf.getQueueName(), true, false, false, null);
-
-
-        //Temp code to simulate sending of events
-        Channel producerChannel = connection.createChannel();
-        for (int i=0; i< 10; i++) {
-            String message = "[{\"points\":[[" + System.currentTimeMillis() + "," + i + "]],\"name\":\"agm_storypoints\",\"columns\":[\"time\", \"new_val\"]}]";
-            AMQP.BasicProperties.Builder propsBuilder = new AMQP.BasicProperties.Builder();
-            Map map = new HashMap<String,Object>();
-            map.put("dbname", "db1");
-            propsBuilder.headers(map);
-            producerChannel.basicPublish("", rabbitmqConf.getRoutingKey(), propsBuilder.build(), message.getBytes());
-            System.out.println(" [x] Sent '" + message + "'");
-        }
-
     }
 
     @Override
