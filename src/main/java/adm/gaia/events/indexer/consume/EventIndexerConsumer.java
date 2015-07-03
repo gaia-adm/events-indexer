@@ -41,7 +41,7 @@ public class EventIndexerConsumer extends DefaultConsumer {
             Response response = webTarget.request(MediaType.APPLICATION_JSON_TYPE).
                                              post(Entity.entity(body, MediaType.TEXT_PLAIN_TYPE));
 
-            if (response.getStatus() == 200) {
+            if (response.getStatus() == 204) {
                 getChannel().basicAck(envelope.getDeliveryTag(), false);
             } else
             {
