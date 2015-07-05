@@ -2,8 +2,8 @@ machine:
   services:
     - docker
 dependencies:
-  cache_directories:
-    - "~/docker"
+  #cache_directories:
+  #  - "~/docker"
 
   override:
     - cp Dockerfile Dockerfile.run
