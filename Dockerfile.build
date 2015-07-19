@@ -7,4 +7,7 @@ WORKDIR $GAIA_HOME
 
 ADD . $GAIA_HOME
 
-RUN ["mvn","-DuseProxy=true","-DproxyHost=web-proxy.israel.hp.com","-DproxyPort=8080","clean","install"]
+RUN ["mvn","clean","install"]
+
+#with proxy
+#RUN ["mvn","-DuseProxy=true","-DproxyHost=web-proxy.israel.hp.com","-DproxyPort=8080","clean","install"]
