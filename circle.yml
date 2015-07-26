@@ -29,7 +29,7 @@ test:
     - sleep 5
     - "curl --data 'my_time_series,status=open value=12345 17345536544792478' 'http://localhost:9000/fake-data?repeat=2&sendto=rabbitmq'"
     - sleep 5
-    - "curl -G 'http://localhost:8086/query' --data-urlencode 'db=db1&u=root&p=root&q=SELECT * FROM my_time_series' | grep 'open' | grep '12345'"
+    - "curl -G 'http://localhost:8086/query' --data-urlencode 'db=db1' --data-urlencode 'u=root' --data-urlencode 'p=root' --data-urlencode 'q=SELECT * FROM my_time_series' | grep 'open' | grep '12345'"
 deployment:
   hub:
     branch: master
