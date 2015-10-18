@@ -19,6 +19,7 @@ dependencies:
 
     #- if [[ -e ~/docker/event-indexer.tar ]]; then docker load -i ~/docker/event-indexer.tar; fi
     - docker build -t gaiaadm/event-indexer .
+    - docker tag gaiaadm/event-indexer gaiaadm/event-indexer:$CIRCLE_BUILD_NUM
     #- mkdir -p ~/docker; docker save gaiaadm/event-indexer > ~/docker/event-indexer.tar
 test:
   override:
