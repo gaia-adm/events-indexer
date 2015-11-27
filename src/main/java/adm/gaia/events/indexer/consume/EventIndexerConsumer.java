@@ -28,7 +28,7 @@ public class EventIndexerConsumer extends DefaultConsumer {
                                AMQP.BasicProperties props, byte[] body)
     {
         System.out.println(" [*] Channel " + getChannel().toString() +
-                Thread.currentThread().toString() + "Received: " + body.toString());
+                Thread.currentThread().toString() + ", Received: " + body.length + " bytes");
 
         try {
             String dbName = props.getHeaders().get("dbname").toString();
