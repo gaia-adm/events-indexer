@@ -1,12 +1,9 @@
 #!/bin/sh
 
-cp Dockerfile Dockerfile.tmp
-cp Dockerfile.build Dockerfile
-docker build -t build-img .
+docker build -t build-img -f Dockerfile.build .
 docker create --name build-cont build-img
 docker cp build-cont:/usr/local/gaia/target/events-indexer-1.0-SNAPSHOT.jar ./target
 
-cp Dockerfile.tmp Dockerfile
 docker build -t gaiaadm/event-indexer .
 
 docker run -d -p 5673:5672 -p 15673:15672 -e RABBITMQ_PASS="mypass" --name rabbitmq tutum/rabbitmq

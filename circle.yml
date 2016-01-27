@@ -1,27 +1,26 @@
 machine:
+  pre:
+    - echo 'DOCKER_OPTS="-s btrfs -e lxc -D --userland-proxy=false"' | sudo tee -a /etc/default/docker
+    - sudo curl -L -o /usr/bin/docker 'https://s3-external-1.amazonaws.com/circle-downloads/docker-1.9.1-circleci-cp-workaround'
+    - sudo chmod 0755 /usr/bin/docker
   services:
     - docker
 dependencies:
-  #cache_directories:
-  #  - "~/docker"
-
+  pre:
+    - sudo apt-get update && sudo apt-get install jq openssl
+    # download update_service script
+    - curl -LO https://raw.githubusercontent.com/gaia-adm/gaia-fleet/master/update_service.sh && chmod +x update_service.sh
   override:
     - cp Dockerfile Dockerfile.run
     - cp Dockerfile.build Dockerfile
-
-    #- if [[ -e ~/docker/build-img.tar ]]; then docker load -i ~/docker/build-img.tar; fi
     - docker build -t build-img .
-    #- mkdir -p ~/docker; docker save build-img > ~/docker/build-img.tar
-
     - docker create --name build-cont build-img
     - mkdir -p ./target
     - docker cp build-cont:/usr/local/gaia/target/events-indexer-1.0-SNAPSHOT.jar ./target/events-indexer-1.0-SNAPSHOT.jar
     - cp Dockerfile.run Dockerfile
-
-    #- if [[ -e ~/docker/event-indexer.tar ]]; then docker load -i ~/docker/event-indexer.tar; fi
     - docker build -t gaiaadm/event-indexer .
-    - docker tag gaiaadm/event-indexer gaiaadm/event-indexer:$CIRCLE_BUILD_NUM
-    #- mkdir -p ~/docker; docker save gaiaadm/event-indexer > ~/docker/event-indexer.tar
+    - docker tag gaiaadm/event-indexer gaiaadm/event-indexer:$CIRCLE_BUILD_NUM-$CIRCLE_BRANCH
+    - docker tag gaiaadm/event-indexer gaiaadm/event-indexer:$CIRCLE_BRANCH
 test:
   override:
     - docker run -d -p 5673:5672 -p 15673:15672 -e RABBITMQ_PASS="mypass" --name rabbitmq tutum/rabbitmq
@@ -33,11 +32,12 @@ test:
     - sleep 5
     - "curl -G 'http://localhost:8086/query' --data-urlencode 'db=db1' --data-urlencode 'u=root' --data-urlencode 'p=root' --data-urlencode 'q=SELECT * FROM my_time_series' | grep 'open' | grep '12345'"
 deployment:
-  hub:
-    branch: master
+  continuous:
+    branch: [master, develop, /feature_.*/]
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push gaiaadm/event-indexer
+      - ./update_service.sh -t $CIRCLE_BRANCH -b $CIRCLE_BUILD_NUM -f events-indexer.service -n event-indexer
 general:
   artifacts:
     - target/event-indexer.jar
