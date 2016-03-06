@@ -9,7 +9,7 @@ dependencies:
   pre:
     - sudo apt-get update && sudo apt-get install jq openssl
     # download update_service script
-    - curl -LO https://raw.githubusercontent.com/gaia-adm/gaia-fleet/master/update_service.sh && chmod +x update_service.sh
+    # - curl -LO https://raw.githubusercontent.com/gaia-adm/gaia-fleet/master/update_service.sh && chmod +x update_service.sh
   override:
     - cp Dockerfile Dockerfile.run
     - cp Dockerfile.build Dockerfile
@@ -37,7 +37,8 @@ deployment:
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push gaiaadm/event-indexer
-      - ./update_service.sh -t $CIRCLE_BRANCH -b $CIRCLE_BUILD_NUM -f events-indexer.service -n event-indexer
+      # We removed this service from production!
+      #- ./update_service.sh -t $CIRCLE_BRANCH -b $CIRCLE_BUILD_NUM -f events-indexer.service -n event-indexer
 general:
   artifacts:
     - target/event-indexer.jar
